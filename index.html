@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>SecureNet Web3 Browser | Faster, Safer, Smarter</title>
+        <meta name="description" content="Get a faster and better browser. SecureNet helps you browse safely and seamlessly with its free VPN, Ad Blocker, integrated messaging apps and private mode." />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- favicon CSS -->
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico" />
+        <!-- google fonts -->
+        <link href="../css?family=Noto+Serif:400,400i" rel="stylesheet" />
+        <link href="../css-1?family=Alice" rel="stylesheet" />
+        <!-- custom fonts -->
+        <link href="fonts/aileron.css" rel="stylesheet" />
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="css/plugins.min.css" />
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="css/app.css" />
+        <!-- Your CSS -->
+        <link rel="stylesheet" href="css/custom.css" />
+        <link rel="stylesheet" href="css/custom-new.css" />
+        <style>
+            @media (min-width: 992px) {
+                .navbar-sticky--on .navbar-nav .nav-link {
+                    padding-top: 13px;
+                    padding-bottom: 13px;
+                }
+            }
+        </style>
+    </head>
+
+    <body class="" data-spy="scroll" data-target="#navbar-nav">
+        <div class="main">
+            <!-- =========== Start of Navigation (main menu) ============ -->
+            <header class="navbar navbar-sticky navbar-expand-lg navbar-dark">
+                <div class="container position-relative">
+                    <a class="navbar-brand mr-70" href="index.html">
+                        <img class="navbar-brand__regular" style="max-width: 200px;" src="img/securenet-white.png" alt="SecureNet Logo" />
+                        <img class="navbar-brand__sticky" style="max-width: 200px;" src="img/securenet.png" alt="SecureNet Logo" />
+                    </a>
+                    <!--  End of brand logo -->
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- end of Nav toggler -->
+
+                    <div class="navbar-inner ml-lg-auto">
+                        <!--  Nav close button inside off-canvas/ mobile menu -->
+                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!-- end of Nav Toggoler -->
+                        <nav>
+                            <ul class="navbar-nav" id="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#features"><i18n>Features</i18n></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#download"><i18n>Download</i18n></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="whats-new.html"><i18n>What's New?</i18n></a>
+                                </li>
+                            </ul>
+                            <!-- end of nav menu items -->
+                        </nav>
+                    </div>
+                    <!-- end of nav cta button -->
+                </div>
+                <!-- end of container -->
+            </header>
+            <!-- =========== End of Navigation (main menu)  ============ -->
+
+            <style>
+                /* Center the loader */
+                #loader {
+                    position: fixed;
+                    left: 50%;
+                    top: 50%;
+                    z-index: 1;
+                    width: 120px;
+                    height: 120px;
+                    margin: -76px 0 0 -76px;
+                    border: 16px solid rgb(243 243 243 / 14%);
+                    border-radius: 50%;
+                    border-top: 16px solid rgb(0 0 0 / 25%);
+                    -webkit-animation: spin 2s linear infinite;
+                    animation: spin 2s linear infinite;
+                    z-index: 99;
+                }
+
+                @-webkit-keyframes spin {
+                    0% {
+                        -webkit-transform: rotate(0deg);
+                    }
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                    }
+                }
+
+                @keyframes spin {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                /* Add animation to "page content" */
+                .animate-bottom {
+                    position: relative;
+                    -webkit-animation-name: animatebottom;
+                    -webkit-animation-duration: 1s;
+                    animation-name: animatebottom;
+                    animation-duration: 1s;
+                }
+
+                @-webkit-keyframes animatebottom {
+                    from {
+                        bottom: -100px;
+                        opacity: 0;
+                    }
+                    to {
+                        bottom: 0px;
+                        opacity: 1;
+                    }
+                }
+
+                @keyframes animatebottom {
+                    from {
+                        bottom: -100px;
+                        opacity: 0;
+                    }
+                    to {
+                        bottom: 0;
+                        opacity: 1;
+                    }
+                }
+            </style>
+            <div id="xloadermans" style="position: fixed; left: 0; right: 0; z-index: 999; top: 0; bottom: 0; background: rgb(0 0 0 / 32%); backdrop-filter: blur(10px);"><div id="loader"></div></div>
+            <script>
+                setTimeout(() => {
+                    document.getElementById("xloadermans").style.display = "none";
+                    document.getElementById("loader").style.display = "none";
+                }, 1000);
+            </script>
+
+            <!-- =========== Start of Hero ============ -->
+            <style>
+                @media (min-width: 992px) {
+                    .hero {
+                        padding-top: 9.8rem;
+                    }
+                }
+
+                .newbgxsos {
+                    background-image: url("img/bg.jpg");
+                    background-size: cover;
+                    background-position: left;
+                    background-attachment: fixed;
+                }
+
+                .space {
+                    padding-top: 4rem;
+                    padding-bottom: 4rem;
+                }
+
+                section .row {
+                    display: flex;
+                    align-items: center;
+                }
+            </style>
+            <section class="pb-lg-0 hero hero--dark bg-color-primary newbgxsos">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+                            <div class="d-lg-flex align-items-lg-center position-relative text-center mb-100">
+                                <div class="hero-content hero-content--center mx-auto">
+                                    <h1 class="hero__title font-w-400"><i18n>WEB3 Browser</i18n></h1>
+
+                                    <p class="lead hero__description">
+                                        <i18n>We developed SecureNet to keep CPU and RAM comfortable. Browser for personal use, internet surfing, TV series-movie-documentary watchers or Gamers.</i18n>
+                                    </p>
+                                    <a href="#download" class="btn btn--bg-yellow btn-3d-hover btn-splash-hover"><i18n>Download now - Free</i18n></a>
+                                </div>
+                                <!-- end of content -->
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of row -->
+                    <div class="row">
+                        <div class="col-12 col-xl-8 mx-auto align-items-center text-center">
+                            <div class="position-relative">
+                                <picture><img style="border-radius: 0.3375rem;" class="xrounded-lg xbox-shadow-2" src="img/newhome.png" alt="hero-6-screen" /></picture>
+                            </div>
+                            <!-- enf of screen / video -->
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of row -->
+                </div>
+                <!-- end of container -->
+                <div class="hero__shape">
+                    <img src="img/hero-svg-shape-2.svg" alt="hero bg" class="svg" />
+                </div>
+                <!-- end of hero svg shape -->
+            </section>
+            <!-- =========== End of Hero ============ -->
+
+            <!-- =========== Start of Features ============ -->
+            <section class="space-top" id="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+                            <div class="section-title reveal text-center mb-80">
+                                <p class="mb-10 text-uppercase font-w-700"><i18n>ADVANTAGES</i18n></p>
+                                <h3 class="font-w-400"><i18n>Here are some things you'll love in SecureNet</i18n></h3>
+                            </div>
+                            <!-- end of section title -->
+                        </div>
+                    </div>
+                    <!-- end of row -->
+                    <div class="row border-bottom-light space-bottom reveal" style="display: flex; align-items: flex-start;">
+                        <div class="col-12 col-md-6 col-lg-4 mb-30 mb-lg-0">
+                            <div class="features">
+                                <div class="d-flex mb-20">
+                                    <span class="mr-20">
+                                        <img style="width: 52px;" src="img/safe.svg" alt="family" />
+                                    </span>
+                                    <h5><i18n>Browse faster</i18n></h5>
+                                </div>
+                                <p>
+                                    <i18n>We use much less processing capacity than other browsers and there is built-in software that helps web pages load faster.</i18n>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-12 col-md-6 col-lg-4 mb-30 mb-lg-0">
+                            <div class="features">
+                                <div class="d-flex mb-20">
+                                    <span class="mr-20">
+                                        <img style="width: 52px;" src="img/safe.png" alt="communication" />
+                                    </span>
+                                    <h5><i18n>Increase Privacy</i18n></h5>
+                                </div>
+                                <p>
+                                    <i18n>Trust us. SecureNet Reduces third-party online tracking and protects you while you browse.</i18n>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-12 col-md-6 col-lg-4 mb-30 mb-lg-0">
+                            <div class="features">
+                                <div class="d-flex mb-20">
+                                    <span class="mr-20">
+                                        <img style="width: 52px;" src="img/chat.svg" alt="management" />
+                                    </span>
+                                    <h5><i18n>Your Personal Browser</i18n></h5>
+                                </div>
+                                <p>
+                                    <i18n>Faster, safer and smarter than default browsers. Fully-featured for privacy, security, and so much more.</i18n>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of row -->
+                </div>
+                <!-- end of container -->
+            </section>
+            <!-- =========== End of Features ============ -->
+
+            <!-- =========== Start of Left Menu ============ -->
+            <section class="space">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-10 col-lg-5 mb-50 mb-lg-0 reveal">
+                            <p style="margin-top: 15px;" class="mb-10 text-uppercase font-w-700"><i18n>QUICK ACCESS MENU</i18n></p>
+                            <h3 class="mb-20 font-w-400"><i18n>Built-in Left Menu Tools</i18n></h3>
+                            <p class="mb-0"><i18n>You can quickly access applications thanks to the menu on the left. If you want, you can divide the screen into two or use it directly.</i18n></p>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-12 col-md-9 col-lg-6 ml-lg-auto reveal">
+                            <div class="position-relative">
+                                <picture><img class="rounded-default" src="img/free-leftmenu.png" alt="" /></picture>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of row -->
+                </div>
+                <!-- end of container -->
+            </section>
+            <!-- =========== End of Left Menu ============ -->
+
+            <!-- =========== Start of Theme ============ -->
+            <section class="space">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-10 col-lg-6 mb-50 mb-lg-0 reveal">
+                            <div class="position-relative">
+                                <picture><img class="rounded-default" src="img/free-theme.png" alt="" /></picture>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-12 col-md-9 col-lg-5 ml-lg-auto reveal">
+                            <p style="margin-top: 15px;" class="mb-10 text-uppercase font-w-700"><i18n>FEEL LIVE</i18n></p>
+                            <h3 class="mb-20 font-w-400"><i18n>Theme and Colors</i18n></h3>
+                            <p class="mb-0"><i18n>Customize SecureNet with dark and light themes, keyboard shortcuts, wallpapers, extensions, your favorite bookmarks and many more.</i18n></p>
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of row -->
+                </div>
+                <!-- end of container -->
+            </section>
+            <!-- =========== End of Theme ============ -->
+
+            <!-- =========== Start of Dowloand ============ -->
+            <section class="space bg-color-grey" id="download" style="padding-top: 4rem; padding-bottom: 4rem;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-9 mx-auto">
+                            <div class="section-title reveal text-center mb-80">
+                                <p class="mb-10 text-uppercase font-w-700"><i18n>You deserve a safer browser.</i18n></p>
+                                <h3 style="font-size: 17px;" class="font-w-400">
+                                    <i18n>
+                                        Thanks to SecureNet, your data (cookies and browsing) is safe.<br>
+                                        We do not collect, share or sell your data with anyone.<br>
+                                        Clear cache or leave no traces whenever you want, it's up to you :)
+                                    </i18n>
+                                </h3>
+                            </div>
+                            <!-- end of section title -->
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of row -->
+
+                    <div class="row justify-content-center reveal">
+                        <div class="col-12 col-sm-6 mx-sm-auto col-xl-4 mb-40 mb-xl-0">
+                            <div class="card text-center rounded-md">
+                                <div class="header d-flex flex-column align-items-center pt-30 pb-20 border-bottom-light">
+                                    <span class="font-size-14 text-uppercase font-w-600 mb-20">v1.0.1</span>
+                                    <span class="icon-rounded icon-rounded--lg position-relative mb-10">
+                                        <img style="max-width: 50px; margin: 29px;" src="img/windows.png" alt="" />
+                                    </span>
+                                    <h2 class="h4-font color-light-secondary">Windows</h2>
+                                </div>
+                                <div class="body pb-40 pr-30 pl-30">
+                                    <a style="margin-top: 25px;" href="" class="btn btn--sm w-100 btn-3d-hover btn-splash-hover btn--bg-grey btn--color-primary">
+                                        <span class="btn__text">SecureNet-Web-Setup-1.0.1.exe</span>
+                                    </a>
+                                    <a
+                                        href=""
+                                        style="margin-left: 0; margin-top: 10px;"
+                                        class="btn btn--sm w-100 btn-3d-hover btn-splash-hover btn--bg-grey btn--color-primary"
+                                    >
+                                        <span class="btn__text">SecureNet-1.0.1-win.zip</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+
+                        <div class="col-12 col-sm-6 mx-sm-auto col-xl-4 mb-40 mb-xl-0">
+                            <div class="card text-center rounded-md">
+                                <div class="header d-flex flex-column align-items-center pt-30 pb-20 border-bottom-light">
+                                    <span class="font-size-14 text-uppercase font-w-600 mb-20">v1.0.1</span>
+                                    <span class="icon-rounded icon-rounded--lg position-relative mb-10">
+                                        <img style="max-width: 50px; margin: 29px;" src="img/linux.png" alt="" />
+                                    </span>
+                                    <h2 class="card__value h4-font">Linux</h2>
+                                </div>
+                                <div class="body pb-40 pr-30 pl-30">
+                                    <a href="" style="margin-top: 25px;" class="btn btn--sm w-100 btn-3d-hover btn-splash-hover btn--bg-grey btn--color-primary">
+                                        <span class="btn__text">SecureNet-1.0.1_amd64.deb</span>
+                                    </a>
+                                    <a
+                                        href=""
+                                        style="margin-left: 0; margin-top: 10px;"
+                                        class="btn btn--sm w-100 btn-3d-hover btn-splash-hover btn--bg-grey btn--color-primary"
+                                    >
+                                        <span class="btn__text">SecureNet-1.0.1.AppImage</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+
+                        <div class="col-12 col-sm-6 mx-sm-auto col-xl-4 mb-40 mb-xl-0">
+                            <div class="card text-center rounded-md">
+                                <div class="header d-flex flex-column align-items-center pt-30 pb-20 border-bottom-light">
+                                    <span class="font-size-14 text-uppercase font-w-600 mb-20">v1.0.1</span>
+                                    <span class="icon-rounded icon-rounded--lg position-relative mb-10">
+                                        <img style="max-width: 50px; margin: 29px;" src="img/mac.png" alt="" />
+                                    </span>
+                                    <h2 class="card__value h4-font color-light-secondary">Mac</h2>
+                                </div>
+                                <div class="body pb-40 pr-30 pl-30">
+                                    <a href="" style="margin-top: 25px;" class="btn btn--sm w-100 btn-3d-hover btn-splash-hover btn--bg-grey btn--color-primary">
+                                        <span class="btn__text">SecureNet-1.0.1.dmg</span>
+                                    </a>
+                                    <a
+                                        href=""
+                                        style="margin-left: 0; margin-top: 10px;"
+                                        class="btn btn--sm w-100 btn-3d-hover btn-splash-hover btn--bg-grey btn--color-primary"
+                                    >
+                                        <span class="btn__text">SecureNet-1.0.1.APP</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of pricing row -->
+                </div>
+            </section>
+            <!-- =========== End of Pricing ============ -->
+
+            <style>
+                .btn-outline-primary {
+                    color: #0d6efd;
+                    border-color: #0d6efd;
+                    border: solid 1px;
+                    padding: 9px 6px;
+                }
+            </style>
+            <div class="container py-3" style="padding-top: 50px !important;">
+                <main id="buynow">
+                    <div class="row justify-content-center reveal">
+                        <div class="col-12 col-sm-6 mx-sm-auto col-xl-4 mb-40 mb-xl-0">
+                            <div class="card text-center rounded-md">
+                                <div class="header d-flex flex-column align-items-center pt-30 pb-20 border-bottom-light">
+                                    <span class="font-size-14 text-uppercase font-w-600 mb-20">v1.0.1</span>
+                                    <span class="icon-rounded icon-rounded--lg position-relative mb-10">
+                                        <img style="max-width: 50px; margin: 29px;" src="img/android.png" alt="" />
+                                    </span>
+                                    <h2 class="h4-font color-light-secondary">Android</h2>
+                                </div>
+                                <div class="body pb-40 pr-30 pl-30">
+                                    <a style="margin-top: 25px;" href="" class="btn btn--sm w-100 btn-3d-hover btn-splash-hover btn--bg-grey btn--color-primary">
+                                        <span class="btn__text">Securenet-Android-1.0.1.apk</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+
+                        <div class="col-12 col-sm-6 mx-sm-auto col-xl-4 mb-40 mb-xl-0">
+                            <div class="card text-center rounded-md">
+                                <div class="header d-flex flex-column align-items-center pt-30 pb-20 border-bottom-light">
+                                    <span class="font-size-14 text-uppercase font-w-600 mb-20">v1.0.1</span>
+                                    <span class="icon-rounded icon-rounded--lg position-relative mb-10">
+                                        <img style="max-width: 50px; margin: 29px;" src="img/ios.png" alt="" />
+                                    </span>
+                                    <h2 class="card__value h4-font">iOS</h2>
+                                </div>
+                                <div class="body pb-40 pr-30 pl-30">
+                                    <a href="" style="margin-top: 25px;" class="btn btn--sm w-100 btn-3d-hover btn-splash-hover btn--bg-grey btn--color-primary">
+                                        <span class="btn__text">Securenet-iPhone-1.0.1.ipa</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+
+                        <div class="col-12 col-sm-6 mx-sm-auto col-xl-4 mb-40 mb-xl-0">
+                            <div class="card text-center rounded-md">
+                                <div class="header d-flex flex-column align-items-center pt-30 pb-20 border-bottom-light">
+                                    <span class="font-size-14 text-uppercase font-w-600 mb-20">v1.0.1</span>
+                                    <span class="icon-rounded icon-rounded--lg position-relative mb-10">
+                                        <img style="max-width: 50px; margin: 29px;" src="img/windows.png" alt="" />
+                                    </span>
+                                    <h2 class="card__value h4-font color-light-secondary">Windows Phone</h2>
+                                </div>
+                                <div class="body pb-40 pr-30 pl-30">
+                                    <a href="" style="margin-top: 25px;" class="btn btn--sm w-100 btn-3d-hover btn-splash-hover btn--bg-grey btn--color-primary">
+                                        <span class="btn__text">Securenet-Windows-1.0.1.UWP</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of pricing row -->
+                </main>
+            </div>
+
+            <section class="bg-color-primary space position-relative" id="reviews" style="background: rgb(239 239 239 / 14%); padding: 30px 0; border-bottom: solid 1px #ececec;">
+                <div class="container">
+                    <div class="row xmt-100">
+                        
+                    </div>
+                    <!-- end of clients logo row -->
+                </div>
+                <!-- end of container -->
+            </section>
+
+            <!-- =========== Start of Footer ============ -->
+            <footer class="footer position-relative">
+                <div class="space border-bottom-light">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-lg-3 mb-20 mb-lg-0">
+                                <span class="mb-20">
+                                    <a href="#"><img style="max-width: 150px;" src="img/securenet.png" alt="SecureNet Browser" /></a>
+                                </span>
+                                <p>
+                                    <i18n>
+                                        SecureNet combines the speed and functionality of a modern browser with advanced security features that safeguard your online experience like never before.
+                                    </i18n>
+                                </p>
+                                <ul class="social-lists d-flex mb-0 mt-30">
+                                    <li>
+                                        <a target="_blank" href="https://twitter.com/securenethub/"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://www.instagram.com/securenethub/"><i class="fa fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://www.instagram.com/securenethub/"><i class="fa fa-instagram"></i></a>
+                                    </li>
+                                </ul>
+                                <!-- end of social list -->
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                                <div class="footer-widget">
+                                    <h6 class="mb-20"><i18n>Company</i18n></h6>
+                                    <ul>
+                                        <li><a target="_blank" href="https://www.securenethub.org/">SecureNethub</a></li>
+                                        <li><a target="_blank" href="https://www.securenethub.org/apps">APPS</a></li>
+                                        <li><a target="_blank" href="https://github.com/securenethub">Github</a></li>
+                                        <li><a target="_blank" href="https://www.linkedin.com/in/securenethub/">Linkedin</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- end of col -->
+                            <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                                <div class="footer-widget">
+                                    <h6 class="mb-20"><i18n>Features</i18n></h6>
+                                    <ul>
+                                        <li>
+                                            <a href="whats-new.html"><i18n>What's New?</i18n></a>
+                                        </li>
+                                        <li><a target="_blank" href="https://github.com/securenethub">Github</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- end of col -->
+                            <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                                <div class="footer-widget">
+                                    <h6 class="mb-20"><i18n>Adress</i18n></h6>
+                                    <p class="">356 SW 12th Ave, Deerfield Beach, FL 33442, United States</p>
+
+                                    <div class="mt-30 d-flex align-items-start flex-column flex-md-row">
+                                        <span class="color-primary mr-20 mt-10 mb-10 mb-md-0"><i class="icon icon-email"></i></span>
+
+                                        <div>
+                                            <h6 style="font-size: 16px; margin-bottom: 2px;"><i18n>Send us an email</i18n></h6>
+                                            <a href="mailto:apps@securenethub.org">
+                                                <p>apps@securenethub.org</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of col -->
+                        </div>
+                        <!-- end of row -->
+                    </div>
+                    <!-- end of container -->
+                </div>
+                <!-- end of main footer -->
+                <div class="bg-color-grey py-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 d-md-flex justify-content-between align-items-center">
+                                <nav class="nav">
+                                    <ul class="d-flex mb-md-0">
+                                        <li>
+                                            <a href="privacy-policy.html"><i18n>Our Privacy Policy</i18n></a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto:apps@securenethub.org"><i18n>Contact Us</i18n></a>
+                                        </li>
+                                        <li><a>Copyright &copy; <script>document.write(new Date().getFullYear())</script> All rights reserved, Made with ♥</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of container -->
+                </div>
+                <!-- mini footer end -->
+            </footer>
+            <!-- =========== End of Footer ============ -->
+            
+            <!-- -->
+            <script src="js/plugins.min.js"></script>
+            <script src="js/app.js"></script>
+        </div>
+    </body>
+</html>

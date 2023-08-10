@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>SecureNet Web3 Browser | Update</title>
+        <meta name="description" content="Get a faster and better browser. SecureNet helps you browse safely and seamlessly with its free VPN, Ad Blocker, integrated messaging apps and private mode." />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- favicon CSS -->
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico" />
+        <!-- google fonts -->
+        <link href="../css?family=Noto+Serif:400,400i" rel="stylesheet" />
+        <link href="../css-1?family=Alice" rel="stylesheet" />
+        <!-- custom fonts -->
+        <link href="fonts/aileron.css" rel="stylesheet" />
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="css/plugins.min.css" />
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="css/app.css" />
+        <!-- Your CSS -->
+        <link rel="stylesheet" href="css/custom.css" />
+        <link rel="stylesheet" href="css/custom-new.css" />
+        <style>
+            @media (min-width: 992px) {
+                .navbar-sticky--on .navbar-nav .nav-link {
+                    padding-top: 13px;
+                    padding-bottom: 13px;
+                }
+            }
+        </style>
+    </head>
+
+<style>
+pre {
+background: whitesmoke;
+padding: 11px 11px;
+word-wrap: break-word !important;
+width: 100%;
+}
+pre code {
+font-size: 13px;
+word-break: initial;
+word-wrap: break-word !important;
+white-space: break-spaces;
+}
+
+.h3-font, h3, .hero__title {
+font-size: 25px;
+margin-bottom: 15px;
+margin-top: 5px;
+}
+
+.newclsolli ul, .newclsolli ol {
+list-style: circle;
+padding-left: 0;
+}
+</style>
+
+<body class="" data-spy="scroll" data-target="#navbar-nav">
+<!-- =========== Start of Navigation (main menu) ============ -->
+<header class="navbar navbar-sticky navbar-expand-lg navbar-dark">
+    <div class="container position-relative">
+        <a class="navbar-brand mr-70" href="index.html">
+            <img class="navbar-brand__regular" style="max-width: 200px;" src="img/securenet-white.png" alt="SecureNet Logo" />
+            <img class="navbar-brand__sticky" style="max-width: 200px;" src="img/securenet.png" alt="SecureNet Logo" />
+        </a>
+        <!--  End of brand logo -->
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- end of Nav toggler -->
+
+        <div class="navbar-inner ml-lg-auto">
+            <!--  Nav close button inside off-canvas/ mobile menu -->
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- end of Nav Toggoler -->
+            <nav>
+                <ul class="navbar-nav" id="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#features"><i18n>Features</i18n></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#download"><i18n>Download</i18n></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="whats-new.html"><i18n>What's New?</i18n></a>
+                    </li>
+                </ul>
+                <!-- end of nav menu items -->
+            </nav>
+        </div>
+        <!-- end of nav cta button -->
+    </div>
+    <!-- end of container -->
+</header>
+<!-- =========== End of Navigation (main menu)  ============ -->
+
+
+<style>
+/* Center the loader */
+#loader {
+position: fixed;
+left: 50%;
+top: 50%;
+z-index: 1;
+width: 120px;
+height: 120px;
+margin: -76px 0 0 -76px;
+border: 16px solid rgb(243 243 243 / 14%);
+border-radius: 50%;
+border-top: 16px solid rgb(0 0 0 / 25%);
+-webkit-animation: spin 2s linear infinite;
+animation: spin 2s linear infinite;
+z-index: 99;
+}
+
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+position: relative;
+-webkit-animation-name: animatebottom;
+-webkit-animation-duration: 1s;
+animation-name: animatebottom;
+animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+from { bottom:-100px; opacity:0 } 
+to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+from{ bottom:-100px; opacity:0 } 
+to{ bottom:0; opacity:1 }
+}
+</style>
+<div id="xloadermans" style="
+position: fixed;
+left: 0;
+right: 0;
+z-index: 999;
+top: 0;
+bottom: 0;
+background: rgb(0 0 0 / 32%);
+backdrop-filter: blur(10px);
+"><div id="loader"></div></div>
+<script>
+setTimeout(() => {
+document.getElementById("xloadermans").style.display = "none";
+document.getElementById("loader").style.display = "none";
+}, 1000);
+</script>
+
+
+<section style="background: #4e4e4e; padding: 43px 0; margin-top: 0px;" class="space space-top--lg mt-50 mt-lg-0">
+</section>
+
+
+
+<section class="space">
+<div class="container">
+<div class="row" style="display: flex;align-items: center;">
+<div class="col-12 col-md-10 col-lg-5 mb-50 mb-lg-0 reveal">
+<p style="margin-top: 15px;" class="mb-10 text-uppercase font-w-700"><i18n>v1.0.1</i18n></p>
+<h3 class="mb-20 font-w-400"><i18n>Designed for smooth browsing</i18n></h3>
+<p class="mb-0"><i18n>SecureNet offers Tab Islands, an easy way to organize tabs into separate groups. With its multi-threaded combiner and modular design, SecureNet offers the most forward-thinking browsing experience ever.</i18n></p>
+
+</div>
+<!-- end of col -->
+<div class="col-12 col-md-9 col-lg-6 ml-lg-auto reveal">
+<div class="position-relative">
+<picture><img class="rounded-default" src="img/101update/multitabbars1.png" alt=""></picture>
+</div>
+</div>
+<!-- end of col -->
+</div>
+<!-- end of row -->
+</div>
+<!-- end of container -->
+</section>
+
+
+
+
+
+
+
+<!-- =========== Start of Footer ============ -->
+<footer class="footer position-relative">
+    <div class="space border-bottom-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-4 col-lg-3 mb-20 mb-lg-0">
+                    <span class="mb-20">
+                        <a href="#"><img style="max-width: 150px;" src="img/securenet.png" alt="SecureNet Browser" /></a>
+                    </span>
+                    <p>
+                        <i18n>
+                            SecureNet combines the speed and functionality of a modern browser with advanced security features that safeguard your online experience like never before.
+                        </i18n>
+                    </p>
+                    <ul class="social-lists d-flex mb-0 mt-30">
+                        <li>
+                            <a target="_blank" href="https://twitter.com/securenethub/"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.instagram.com/securenethub/"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.instagram.com/securenethub/"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                    <!-- end of social list -->
+                </div>
+                <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                    <div class="footer-widget">
+                        <h6 class="mb-20"><i18n>Company</i18n></h6>
+                        <ul>
+                            <li><a target="_blank" href="https://www.securenethub.org/">SecureNethub</a></li>
+                            <li><a target="_blank" href="https://www.securenethub.org/apps">APPS</a></li>
+                            <li><a target="_blank" href="https://github.com/securenethub">Github</a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/in/securenethub/">Linkedin</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end of col -->
+                <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                    <div class="footer-widget">
+                        <h6 class="mb-20"><i18n>Features</i18n></h6>
+                        <ul>
+                            <li>
+                                <a href="whats-new.html"><i18n>What's New?</i18n></a>
+                            </li>
+                            <li><a target="_blank" href="https://github.com/securenethub">Github</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end of col -->
+                <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                    <div class="footer-widget">
+                        <h6 class="mb-20"><i18n>Adress</i18n></h6>
+                        <p class="">356 SW 12th Ave, Deerfield Beach, FL 33442, United States</p>
+
+                        <div class="mt-30 d-flex align-items-start flex-column flex-md-row">
+                            <span class="color-primary mr-20 mt-10 mb-10 mb-md-0"><i class="icon icon-email"></i></span>
+
+                            <div>
+                                <h6 style="font-size: 16px; margin-bottom: 2px;"><i18n>Send us an email</i18n></h6>
+                                <a href="mailto:apps@securenethub.org">
+                                    <p>apps@securenethub.org</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of main footer -->
+    <div class="bg-color-grey py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-md-flex justify-content-between align-items-center">
+                    <nav class="nav">
+                        <ul class="d-flex mb-md-0">
+                            <li>
+                                <a href="privacy-policy.html"><i18n>Our Privacy Policy</i18n></a>
+                            </li>
+                            <li>
+                                <a href="mailto:apps@securenethub.org"><i18n>Contact Us</i18n></a>
+                            </li>
+                            <li><a>Copyright &copy; <script>document.write(new Date().getFullYear())</script> All rights reserved, Made with ♥</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- mini footer end -->
+</footer>
+<!-- =========== End of Footer ============ -->
+<!-- -->
+<script src="js/plugins.min.js"></script>
+<script src="js/app.js"></script>
+
+</div>
+</body>
+
+</html>
